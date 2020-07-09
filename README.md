@@ -41,6 +41,8 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-###Association
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
 - has_many :tweets
 - has_many :comments
