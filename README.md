@@ -37,3 +37,10 @@
 ### Association
 - belongs_to :tweet
 - belongs_to :user
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+###Association
+- has_many :tweets
+- has_many :comments
