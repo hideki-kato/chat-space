@@ -34,8 +34,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user|integer|null: false, foreign_key: true|
-|group|integer|null: false, foreign_key: true|
+|group_name|string|null: false|
 ### Association
 - has_many :tweets
 - has_many :users, through: groups_users
