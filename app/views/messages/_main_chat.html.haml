@@ -1,0 +1,32 @@
+.main-chat
+  .header
+    .header__group__name
+      group name
+      .header__group__member
+        Member：hoge
+    .header__edit
+      =link_to "Edit","#"
+  .main
+    .chat
+      .message
+        .message__name
+          ken
+        .message__date
+          2022/11/11/11:11:11
+      .post__message
+        @@@
+    .chat
+      .message
+        .message__name
+          ken
+        .message__date
+          2022/11/11/11:11:11
+      .post__message
+        @@@
+  .form
+    .form__contents
+      %input{type: "text" ,placeholder: "type a message", class: "input__box"}
+      %label{class: "input__image"} 
+        = icon('fas', 'image', class: "input__image__icon")
+        %input{type: "file", class: "input__image__files"}
+    %input{type: "submit",value: "Send", class: "input__send"} 
