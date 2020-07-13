@@ -1,0 +1,21 @@
+.side__bar
+  .side__bar__box
+    .side__bar__name__box
+      .side__bar__nick__name
+        ニックネーム
+      .side__bar__switch
+        = link_to "http://localhost:3000/", class: "side__bar__switch__btn" do
+          = icon('fas', 'edit')
+        = link_to "http://localhost:3000/", class: "sibe__bar__switch__btn" do
+          = icon('fas', 'cog')
+  .group__list
+    .group
+      .group__name
+        hoge
+      .group__message 
+        メッセージ
+    .group
+      .group__name
+        hoge
+      .group__message
+        メッセージ
