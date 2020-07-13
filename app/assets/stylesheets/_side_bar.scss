@@ -4,7 +4,7 @@ $text-color: #ffffff;
   width: 300px;
   display: inline-block;
   background-color: #2f3e51;
-  &__a {
+  &__box {
     background-color: #253141;
     height: 100px;
     width: 300px;
@@ -13,16 +13,16 @@ $text-color: #ffffff;
     align-items: center;
     padding: 0 20px 0;
 
-    .side__bar__b{
+    .side__bar__name__box{
       color: $text-color;
       height: 20px;
       width: 260px;
       display: flex;
       justify-content: space-between;
-      .side__bar__c {
+      .side__bar__nick__name {
         font-size: 16px;
       }
-      .side__bar__d {
+      .side__bar__switch {
         display: flex;
         justify-content: end;
 
