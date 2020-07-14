@@ -2,11 +2,11 @@
   .side__bar__box
     .side__bar__name__box
       .side__bar__nick__name
-        ニックネーム
+        = current_user.name
       .side__bar__switch
         = link_to "http://localhost:3000/", class: "side__bar__switch__btn" do
           = icon('fas', 'edit')
-        = link_to "http://localhost:3000/", class: "sibe__bar__switch__btn" do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog')
   .group__list
     .group
