@@ -66,45 +66,56 @@ $message-color: #38aef0;
 }
 
 
-.form {
+.footer {
   height: 90px;
   background-color: #d2d2d2d2;
   padding: 20px 40px;
-  display: flex;
-  &__contents {
-    width: 100%;
-    position: relative;
+  
+  .form {
     display: flex;
-    .input__box {
+  
+    .form__contents {
       width: 100%;
+      position: relative;
       display: flex;
-      padding: 0 0 0 10px;
-    }
-    .input__image {
-      border-style: none;
-      color: #434a54;
-      position: absolute;
-      right: 10px;
-      line-height: 50px;
-      &__icon {
-        top: 10px;
-        right: 10;
-        font-size: 1.3rem;
+
+      .field_with_errors {
+        width: 100%;
+        position: relative;
+        display: flex;
       }
 
-      &__files {
-        display: none;
+      .input__box {
+        width: 100%;
+        display: flex;
+        padding: 0 0 0 10px;
+      }
+      .input__image {
+        border-style: none;
+        color: #434a54;
+        position: absolute;
+        right: 10px;
+        line-height: 50px;
+        .input__icon {
+          top: 10px;
+          right: 10;
+          font-size: 1.3rem;
+        }
+
+        .input__files {
+          display: none;
+        }
       }
     }
+    .input__send {
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      font-size: 16px;
+      border: none;
+      color: #fff;
+      background-color: $message-color;
+    }
   }
-  .input__send {
-    height: 50px;
-    padding: 0 30px;
-    margin-left: 15px;
-    font-size: 16px;
-    border: none;
-    color: #fff;
-    background-color: $message-color;
- }
 }
 

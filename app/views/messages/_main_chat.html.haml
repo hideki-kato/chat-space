@@ -1,32 +1,21 @@
 .main-chat
   .header
     .header__group__name
-      group name
+      = @group.name
       .header__group__member
-        Member：hoge
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .header__edit
-      =link_to "Edit","#"
+      =link_to "Edit",edit_group_path(@group)
   .main
-    .chat
-      .message
-        .message__name
-          ken
-        .message__date
-          2022/11/11/11:11:11
-      .post__message
-        @@@
-    .chat
-      .message
-        .message__name
-          ken
-        .message__date
-          2022/11/11/11:11:11
-      .post__message
-        @@@
-  .form
-    .form__contents
-      %input{type: "text" ,placeholder: "type a message", class: "input__box"}
-      %label{class: "input__image"} 
-        = icon('fas', 'image', class: "input__image__icon")
-        %input{type: "file", class: "input__image__files"}
-    %input{type: "submit",value: "Send", class: "input__send"} 
+    = render @messages
+
+  .footer
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .form__contents
+        = f.text_field :content, class: 'input__box', placeholder: 'type a message'
+        = f.label :image, class: 'input__image' do
+          = icon('far', 'image', class: 'input__icon')
+          = f.file_field :image, class: 'input__files'
+      = f.submit 'Send', class: 'input__send'
