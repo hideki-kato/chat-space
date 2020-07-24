@@ -13,26 +13,26 @@ $text-color: #ffffff;
     align-items: center;
     padding: 0 20px 0;
 
-    .side__bar__name__box{
-      color: $text-color;
-      height: 20px;
-      width: 260px;
+  .side__bar__name__box{
+    color: $text-color;
+    height: 20px;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    .side__bar__nick__name {
+      font-size: 16px;
+    }
+    .side__bar__switch {
       display: flex;
-      justify-content: space-between;
-      .side__bar__nick__name {
-        font-size: 16px;
-      }
-      .side__bar__switch {
-        display: flex;
-        justify-content: end;
+      justify-content: end;
 
-        a {
-          color: $text-color;
-          list-style: none;
-          margin-left: 5px;
-        }
+      a {
+        color: $text-color;
+        list-style: none;
+        margin-left: 5px;
       }
     }
+  }
  }
   .group__list {
   width: 300px;
@@ -41,21 +41,21 @@ $text-color: #ffffff;
   background-color: #2f3e51;
   overflow: scroll;
   }
-    .group {
-      box-sizing: border-box;
-      padding:20px 0 40px;
-      a {
-        text-decoration: none;
-      }
-      .group__name {
-        font-size: 15px;
-        color: $text-color;
-        text-decoration: none;
-      }
-      .group__message {
-        font-size: 11px;
-        margin-top: 5px;
-        color: $text-color;
-      }
+  .group {
+    box-sizing: border-box;
+    padding:20px 0 40px;
+    a {
+      text-decoration: none;
     }
+    .group__name {
+      font-size: 15px;
+      color: $text-color;
+      text-decoration: none;
+    }
+    .group__message {
+      font-size: 11px;
+      margin-top: 5px;
+      color: $text-color;
+    }
+  }
 }

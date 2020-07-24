@@ -2,8 +2,8 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="chat">
-          <div class="massage">
+        `<div class="chat" data-message-id=${message.id}>
+          <div class="message">
             <div class="message__name">
               ${message.user_name}
             </div>
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="chat">
+        `<div class="chat" data-message-id=${message.id}>
         <div class="message">
           <div class="message__name">
             ${message.user_name}
@@ -64,3 +64,4 @@ $(function(){
     });
   });
 });
+
